@@ -25,3 +25,8 @@ cursor.execute(sql)
 #obter o resultado da consulta
 result = cursor.fetchall()
 print(result)
+
+for l in result:
+    print(l)
+
+conn.close()
