@@ -1,18 +1,13 @@
-import mysql.connector
+from conexao import conectar
 
-# Conectando ao banco de dados
-config = {
-  'user': 'admin',
-  'password': 'aulanoiteFaculdade',
-  'host': 'dbaula.clstmfvvjfyt.us-east-1.rds.amazonaws.com',
-  'database': 'aula'
-}
+# chama a funçao conectar
+conn = conectar()
 
 # Estabelecer a conexão com o banco de dados
 try:
-    conn = mysql.connector.connect(**config)
+    conn = conn
     print("Conexão executada com sucesso.")
-except mysql.connector.Error as err:
+except conn.connector.Error as err:
     print(f"Conexão falhou: {err}")
 
 # Criando um objeto cursor para executar as consultas SQL
